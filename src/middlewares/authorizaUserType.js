@@ -1,9 +1,9 @@
-function authorizeRole(requireRole){
+function authorizeUserType(requiredType){
     return (req, res, next)=>{
-        if(req.userRole!=requireRole){
+        if(req.userType!=requiredType){
             return res.status(403).json({error: "Acesso negado. Permissão insuficiente"});
         }
         next();
     };
 }
-module.exports=authorizeRole;
+module.exports=authorizeUserType;

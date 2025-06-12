@@ -22,7 +22,8 @@ const User=sequelize.define("User", {
     },
     user_type:{
         type:DataTypes.ENUM("admin", "regular"),
-        allowNull:false
+        allowNull:false,
+        defaultValue: "regular"
     }
 }, {
     tableName:"sys_user",

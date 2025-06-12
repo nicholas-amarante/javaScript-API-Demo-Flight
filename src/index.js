@@ -18,6 +18,20 @@ app.use("/api", aircraftRoutes);
 app.use("/api", flightRoutes);
 app.use("/api", boardingPassRoutes);
 
+app.get("/",( req, res)=>{
+    res.json({
+        message: "Rotas disponíveis",
+        routes: [
+            "/api/aircrafts",
+            "/api/login",
+            "/api/boarding_passes",
+            "/api/flights",
+            "/api/passengers",
+            "/api/users"
+        ]
+    })
+})
+
 app.listen(port, ()=>{
     console.log("app is running...")
 })//definindo porta e declarando funcao anonima
