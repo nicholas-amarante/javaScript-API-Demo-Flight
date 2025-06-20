@@ -11,6 +11,7 @@ const aircraftRoutes=require("./routes/aircraftRoutes");
 const flightRoutes=require("./routes/flightRoutes");
 const boardingPassRoutes=require("./routes/boardingPassRoutes");
 const authRoutes=require("./routes/authRoutes");
+const sequelize = require("./config/db");
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
 app.use("/api", passengerRoutes);
